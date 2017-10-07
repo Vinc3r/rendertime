@@ -1,0 +1,42 @@
+body{
+    background-color: #222;
+    color: #fff;
+    font-family: OpenSans, tahoma, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1pt dotted #fff;
+}
+
+#reInit{
+    padding: 10pt;
+    text-align: center;
+}
+    #reInit a{
+        color: #666;
+        font-style: italic;
+    }
+    #reInit a:hover{
+        color: #fff;
+        font-style: normal;
+    }
+
+.content{
+    padding: 0 10pt;
+}
+
+.externalLink{
+    font-family: consolas;
+    font-size: .75em;
+}
+
+.finalTimeDiv{
+    background-color: #444;
+    padding: 10pt 10pt;
+    border-top: 1pt solid #111;
+    border-bottom: 1pt solid #111;
+}
