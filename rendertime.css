@@ -1,7 +1,7 @@
 body{
-    background-color: #222;
+    background: #222 url("sources/renderz/0002.png") no-repeat bottom right fixed;
     color: #fff;
-    font-family: OpenSans, tahoma, arial, sans-serif;
+    font-family: "Open Sans", Tahoma, Arial, Sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -39,7 +39,7 @@ a{
 
 
 #finalTimeDiv, #titles{
-    background-color: #444;
+    background-color: rgba(66,66,66,.8);
     border-top: 1pt solid #111;
     border-bottom: 1pt solid #111;
 }
