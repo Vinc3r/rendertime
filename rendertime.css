@@ -18,15 +18,17 @@ a{
 }
     #reInit a{
         color: #666;
+        border-color: #666;
         font-style: italic;
     }
     #reInit a:hover{
         color: #fff;
+        border-color: #fff;
         font-style: normal;
     }
 
-.content{
-    padding: 0 10pt;
+#tips{
+    color: #aaa;
 }
 
 .externalLink{
@@ -34,9 +36,38 @@ a{
     font-size: .75em;
 }
 
-.finalTimeDiv{
+
+
+#finalTimeDiv, #titles{
     background-color: #444;
-    padding: 10pt 10pt;
     border-top: 1pt solid #111;
     border-bottom: 1pt solid #111;
 }
+
+#finalTimeDiv{
+    padding: 2% 5%;
+    min-height: 50pt;
+    line-height: 2em;
+}
+
+#titles, #listValues, #divResult, #tips{
+    padding-left: 2%;
+}
+
+.inputTime{
+    width: 50pt;
+    background-color: #fff;
+    border:0;
+    color: #000;
+    text-align: right;
+    font-size: 1em;
+}
+
+.section{
+    border-left: 1px solid #666;
+    padding-left: 4pt;
+}
+    .subSection{        
+        margin-left: 2.5%;
+        padding-left: 10pt;
+    }

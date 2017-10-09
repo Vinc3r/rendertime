@@ -4,104 +4,87 @@
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="https://www.nothing-is-3d.com/tools/rendertime/favicon.gif">
     <link rel="stylesheet" media="screen" href="rendertime.css" type="text/css">
-	<meta name="description" content="Cette page permet d'évaluer grossièrement le temps que mettront vos rendus à se calculer." />
-	<script type="text/javascript">
-		//variables et valeurs par defaut :
-		var Hanim = 0; //nb heures d\'anim
-		var Manim = 0; //nb minutes d\'anim
-		var Sanim = 0; //nb secondes d\'anim
-		var TpsAnim = 0; //duree anim converties en secondes
-		//var FrameAnim = 0; //nombre de frames de l\'anim
-		var Hframe = 0; //nb heures de calcul d\'une frame
-		var Mframe = 0; //nb minutes de calcul d\'une frame
-		var Sframe = 0; //nb secondes de calcul d\'une frame
-		var TpsMoyenFrame = 0; //duree de calcul d\'une frame convertie en secondes
-		var fps = 25; //framerate
-		var computerZZZ = 1; //nb machines de calcul
-		var TpsTotal = 0; //(TpsAnim*TpsMoyenFrame*fps)/computerZZZ
-		var TpsTotalH = 0;
-		var TpsTotalM = 0;
-		var TpsTotalS = 0; 
-		var framesTotal = 0; //nb d\'images a sortir
-	</script>
+	<meta name="description" content="This tool help you to estimate the required time for your render." />
 </head>
 <body>
-<div class="content">
-	<h1 id="titrePage" class="sections">Rendertime</h1>
-	<h2 class="sections">Aide à l'approximation du temps de rendu d'une animation</h2>
-	<div id="choixValeurs" class="sections">
-		<p>Durée de l'animation : 
-			<select name="dureeH" onchange="dureeAnimHeures(this.value)"></select> h 
-			<select name="dureeM" onchange="dureeAnimMinutes(this.value)"></select> min 
-			<select name="dureeS" onchange="dureeAnimSecondes(this.value)"></select> s</p>
-		<p>
-			Framerate <a href="http://en.wikipedia.org/wiki/Frame_rate#Digital_video_and_television" class="externalLink" target="_blank">(?)</a> :
-			<select name="framerate" onchange="giveFPS(this.value)">
-				<option value="24">24p</option>
-				<option value="25" selected="selected">25p</option>
-				<option value="30">30p</option>
-				<option value="48">48p</option>
-				<option value="50">50i</option>
-				<option value="60">60i</option>
-				<option value="72">72p</option>
-				<option value="90">90p</option>
-				<option value="100">100p</option>
-				<option value="120">120p</option>
-				<option value="144">144fps</option>
-				<option value="300">300fps</option>
-			</select>
-		</p>
-		<p>
-			Temps de rendu moyen d'une frame :
-			<select name="oneFrameH" onchange="dureeFrameHeures(this.value)"></select> h 
-			<select name="oneFrameM" onchange="dureeFrameMinutes(this.value)"></select> min 
-			<select name="oneFrameS" onchange="dureeFrameSecondes(this.value)"></select> s
-		</p>
-		<p>
-			Nombre de machines de calcul : 
-			<select name="nbMachines" onchange="nbComputerZZZ(this.value)"></select>
-		</p>
+    <div id="titles">
+        <h1 id="mainTitle" >Rendertime</h1>
+        <h2>Help for needed-rendering-time approximation.</h2>
+    </div>
+	<div id="listValues" >
+        <div class="section">
+            <p>Animation duration:</p>
+            <p class="subSection">
+                <input type="number" class="inputTime" name="durationH" oninput="durationInput(this.value, 'H')" placeholder=0 > h 
+                <input type="number" class="inputTime" name="durationM" oninput="dureeAnimMinutes(this.value)" placeholder=0> m 
+                <input type="number" class="inputTime" name="durationS" oninput="dureeAnimSecondes(this.value)" placeholder=0> s
+            </p>
+        </div>
+        <div class="section">
+            <p>
+                Frame rate <a href="http://en.wikipedia.org/wiki/Frame_rate#Digital_video_and_television" class="externalLink" target="_blank">(?)</a>:
+            </p>
+            <p class="subSection">
+                <select name="framerate" oninput="giveFPS(this.value)">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="25" selected="selected">25</option>
+                    <option value="30">30</option>
+                    <option value="48">48</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="72">72</option>
+                    <option value="90">90</option>
+                    <option value="100">100</option>
+                    <option value="120">120</option>
+                    <option value="144">144</option>
+                    <option value="300">300</option>
+                </select> FPS <span>(or <input type="number" oninput=""  placeholder="custom"> value?)</span>
+            </p>
+        </div>
+        <div class="section">
+            <p>
+                Average rendering time for a frame:
+            </p>
+            <p class="subSection">
+                <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > h 
+                <input type="number" class="inputTime" name="dureeM" oninput="dureeAnimMinutes(this.value)" placeholder=0 > m 
+                <input type="number" class="inputTime" name="dureeS" oninput="dureeAnimSecondes(this.value)" placeholder=0 > s
+            </p>
+        </div>
+        <div class="section">
+            <p>
+                Available computers:
+            </p>
+            <p class="subSection">
+                <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > devices
+            </p>
+            </p>
+        </div>
 	</div>
-	<div id="divResult" class="sections">
+	<div id="divResult" >
 		<p>
-			Nombre de frames : <span id="finalFrames">0</span>
+			Total frames : <span id="finalFrames">0</span>
 		</p>
     </div>
-</div>
-<div class="content">
-		<p class="finalTimeDiv">
-			L&apos;animation devrait probablement se calculer en <span id="finalTime">moins de temps qu'il ne le faut pour l'écrire.</span>
-		</p>
-</div>
-<div class="content">
-	<p id="reInit" class="sections">
-		<a href="index.html">Réinitaliser les valeurs</a>
+    <div id="finalTimeDiv">
+        <p>Frames should be rendered in:</p>
+        <p><span id="finalTime"><i>less time than it takes to write it</i></span>.</p>
+    </div>
+	<p id="reInit" >
+		<a href="index.html">Reset these insane values</a>
 	</p>
-</div>
+    <div id="tips">
+        Killer tips:
+            <ul>
+                <li>use <kbd>Tab</kbd> key to quickly swith between values,</li>
+                <li>you can type value even when in a scrolllist (just  focus on it with mouse click or <kbd>Tab</kbd>)</li>
+            </ul>
+    </div>
 <script type="text/javascript">
-	var divTpsTotal = document.getElementById('finalTime');
-	var divFinalFrames = document.getElementById('finalFrames');
-	function dureeAnimHeures(valeurDureeH){Hanim = parseInt(valeurDureeH);calcul();} //recup duree anim Heures
-	function dureeAnimMinutes(valeurDureeM){Manim = parseInt(valeurDureeM);calcul();} //recup duree anim Minutes
-	function dureeAnimSecondes(valeurDureeS){Sanim = parseInt(valeurDureeS);calcul();} //recup duree anim Secondes
-	//function dureeAnimFrame(valeurFrameAnim){FrameAnim = parseInt(valeurFrameAnim);calcul();} //recup nombre de frames
-	function giveFPS(valeurFPS){fps = parseInt(valeurFPS);calcul();} //recup fps
-	function dureeFrameHeures(valeurOneFrameH){Hframe = parseInt(valeurOneFrameH);calcul();} //recup duree frame Heures
-	function dureeFrameMinutes(valeurOneFrameM){Mframe = parseInt(valeurOneFrameM);calcul();} //recup duree frame Minutes
-	function dureeFrameSecondes(valeurOneFrameS){Sframe = parseInt(valeurOneFrameS);calcul();} //recup duree frame Secondes
-	function nbComputerZZZ(valeurNbComputerZZZ){computerZZZ = parseInt(valeurNbComputerZZZ);calcul();}  //recup nombre machines de calculs
-	function calcul(){
-		TpsAnim = (3600*Hanim)+(60*Manim)+Sanim;
-		TpsMoyenFrame = 3600*Hframe+60*Mframe+Sframe;
-		//if(TpsAnim==0 && FrameAnim!='') TpsAnim = FrameAnim;
-		TpsTotal = (TpsAnim*TpsMoyenFrame*fps)/computerZZZ;
-		TpsTotalH = Math.floor(TpsTotal/3600);
-		TpsTotalM = (Math.floor(TpsTotal/60))-(TpsTotalH*60);
-		framesTotal = TpsAnim*fps;
-		divTpsTotal.style.fontSize = "1.05em";
-		divTpsTotal.innerHTML = TpsTotalH+" h "+TpsTotalM+" min.";
-		divFinalFrames.innerHTML = framesTotal;	
-	}
+function durationInput(val, timeType){
+    console.log(val+" ++++ "+timeType)
+}
 </script>
 </body>
 </html>
