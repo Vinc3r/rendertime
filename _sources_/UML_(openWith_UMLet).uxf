@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>6</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>648</x>
-      <y>30</y>
-      <w>36</w>
-      <h>66</h>
+      <x>760</x>
+      <y>0</y>
+      <w>48</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>User</panel_attributes>
     <additional_attributes/>
@@ -15,158 +15,139 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>156</x>
-      <y>282</y>
-      <w>126</w>
-      <h>54</h>
+      <x>104</x>
+      <y>336</y>
+      <w>168</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Minutes
 --
 id: animDtnM
 type: range int
 range: [0:59]
-[watch user inputs]
-group=3</panel_attributes>
+[watch user inputs]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>156</x>
-      <y>228</y>
-      <w>126</w>
-      <h>48</h>
+      <x>104</x>
+      <y>264</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Hour
 --
 id: animDtnH
 type: int
-[watch user inputs]
-group=3</panel_attributes>
+[watch user inputs]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>156</x>
-      <y>342</y>
-      <w>126</w>
-      <h>60</h>
+      <x>104</x>
+      <y>416</y>
+      <w>168</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Secondes
 --
 id: animDtnS
 type: range int
 range: [0:59]
-[watch user inputs]
-group=3</panel_attributes>
+[watch user inputs]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>150</x>
-      <y>210</y>
-      <w>138</w>
-      <h>198</h>
+      <x>96</x>
+      <y>224</y>
+      <w>184</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>Animation Duration
+animDtn
 --
 bg=white
-layer=-1
-group=3</panel_attributes>
+layer=-1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
-      <y>84</y>
-      <w>486</w>
-      <h>138</h>
+      <x>152</x>
+      <y>72</y>
+      <w>648</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;210.0;10.0;10.0;790.0;10.0</additional_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0;790.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>306</x>
-      <y>210</y>
-      <w>240</w>
-      <h>138</h>
+      <x>304</x>
+      <y>224</y>
+      <w>320</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>Frame Rate
-
+frmRate
 --
 bg=white
-layer=-1
-group=3</panel_attributes>
+layer=-1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>312</x>
-      <y>240</y>
-      <w>126</w>
-      <h>48</h>
+      <y>264</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Presets
 --
-id: frmRate
+id: frmRatePreset
 type: preset list of int
-[watch user inputs]
-group=3</panel_attributes>
+[watch user inputs]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>312</x>
-      <y>294</y>
-      <w>126</w>
-      <h>48</h>
+      <y>336</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Custom (optionnal)
 --
 id: frmRateUser
 type: int
-[watch user inputs]
-group=3</panel_attributes>
+[watch user inputs]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>336</x>
-      <y>84</y>
-      <w>342</w>
-      <h>138</h>
+      <x>344</x>
+      <y>72</y>
+      <w>456</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;210.0;10.0;10.0;550.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>432</x>
-      <y>240</y>
-      <w>120</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.&gt;
-&lt;&lt;only one active&gt;&gt;
-group=3</panel_attributes>
-    <additional_attributes>10.0;100.0;70.0;100.0;70.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0;550.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>864</x>
-      <y>186</y>
-      <w>138</w>
-      <h>138</h>
+      <x>1048</x>
+      <y>208</y>
+      <w>184</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>Average Frame time
 --
@@ -178,10 +159,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>210</y>
-      <w>126</w>
-      <h>48</h>
+      <x>1056</x>
+      <y>240</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Hour
 --
@@ -194,10 +175,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>264</y>
-      <w>126</w>
-      <h>54</h>
+      <x>1056</x>
+      <y>312</y>
+      <w>168</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Minutes
 --
@@ -211,10 +192,10 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>84</y>
-      <w>258</w>
-      <h>114</h>
+      <x>776</x>
+      <y>72</y>
+      <w>344</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>410.0;170.0;410.0;10.0;10.0;10.0</additional_attributes>
@@ -222,25 +203,24 @@ group=4</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>138</x>
-      <y>186</y>
-      <w>414</w>
-      <h>246</h>
+      <x>80</x>
+      <y>192</y>
+      <w>552</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>Duration Input
 --
 bg=white
-layer=-2
-group=3</panel_attributes>
+layer=-2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>84</y>
-      <w>96</w>
-      <h>138</h>
+      <x>776</x>
+      <y>72</y>
+      <w>128</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>140.0;210.0;140.0;10.0;10.0;10.0</additional_attributes>
@@ -248,67 +228,32 @@ group=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>210</y>
-      <w>150</w>
-      <h>18</h>
+      <x>336</x>
+      <y>504</y>
+      <w>192</w>
+      <h>312</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>220.0;370.0;10.0;370.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>576</x>
-      <y>204</y>
-      <w>60</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Duration input update frmNb
-style=wordwrap</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>282</x>
-      <y>234</y>
-      <w>414</w>
-      <h>174</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;270.0;580.0;270.0;580.0;10.0;670.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Text</id>
-    <coordinates>
-      <x>594</x>
-      <y>216</y>
-      <w>60</w>
-      <h>42</h>
+      <x>688</x>
+      <y>248</y>
+      <w>80</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>style=wordwrap</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Text</id>
-    <coordinates>
-      <x>630</x>
-      <y>312</y>
-      <w>60</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>frmNb update Anim Duration
-style=wordwrap</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>684</x>
-      <y>210</y>
-      <w>126</w>
-      <h>48</h>
+      <x>808</x>
+      <y>240</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Frame Number
 --
@@ -321,10 +266,10 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1026</x>
-      <y>210</y>
-      <w>126</w>
-      <h>48</h>
+      <x>1264</x>
+      <y>240</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Available computers
 --
@@ -336,12 +281,151 @@ type: int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
-      <y>84</y>
-      <w>444</w>
-      <h>138</h>
+      <x>776</x>
+      <y>72</y>
+      <w>592</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>720.0;210.0;720.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>760</y>
+      <w>168</w>
+      <h>344</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; update_inputs() &gt;&gt;
+--
+
+_duration input to frame number_
+
+convertTimeToS(animDtnH, animDtnM, animDtnS) * get_frame_rate()
+
+--
+
+_frame number input into duration_
+
+
+
+--
+bg=orange
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>296</y>
+      <w>168</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;630.0;10.0;630.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>912</x>
+      <y>896</y>
+      <w>168</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; get_frame_rate() &gt;&gt;
+--
+returns:
+- if frmRateUser not set:
+    frmRate = frmRatePreset
+- if frmRateUser is set:
+    frmRate = frmRateUser
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1136</x>
+      <y>872</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; convert_seconds_to_time() &gt;&gt;
+--
+args:
+- seconds (or frames)
+--
+animDtnS =
+animDtnM = Math.floor(animDtnS)
+animDtnH = Math.floor(animDtnM)
+--
+returns:
+- animDtnH
+- animDtnM
+- animDtnS
+
+bg=orange
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>400</y>
+      <w>24</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;500.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>296</y>
+      <w>232</w>
+      <h>632</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;770.0;270.0;770.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>504</y>
+      <w>320</w>
+      <h>424</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;510.0;380.0;510.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1136</x>
+      <y>680</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt; convert_time_to_seconds() &gt;&gt;
+--
+args:
+- hour
+- minutes
+- seconds
+--
+var animDtn = hour * 3600 + minutes * 60 + seconds
+--
+returns:
+- animDtn
+
+bg=orange
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
