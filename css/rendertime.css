@@ -12,6 +12,21 @@ a{
     border-bottom: 1pt dotted #fff;
 }
 
+h1, h2{
+    margin:0;
+    padding:0;
+}
+
+input{
+    background-color: rgba(66,66,66,.8);
+    border:0;
+    color: #fff;
+}
+
+#titles{
+    padding: 4pt 0;
+}
+
 #reInit{
     padding: 10pt;
     text-align: center;
@@ -54,20 +69,36 @@ a{
     padding-left: 2%;
 }
 
+#footer{
+    text-align:center;
+    font-size:0.8em;
+}
+    #footer a{
+        border:0;
+        color:#999;
+    }
+    #footer a:hover{
+        color:#fff;
+    }
+
 .inputTime{
     width: 50pt;
-    background-color: #fff;
-    border:0;
-    color: #000;
-    text-align: right;
+    text-align: center;
     font-size: 1em;
 }
 
 .section{
     border-left: 1px solid #666;
     padding-left: 4pt;
+    margin: 4pt 0;
 }
-    .subSection{        
+    .section p{
+        margin:0;
+        padding:4pt;
+    }
+    .subSection{
         margin-left: 2.5%;
         padding-left: 10pt;
     }
+
+
