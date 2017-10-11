@@ -21,9 +21,7 @@
             </p>
         </div>
         <div class="section">
-            <p>
-                Frame rate <a href="http://en.wikipedia.org/wiki/Frame_rate#Digital_video_and_television" class="externalLink" target="_blank">(?)</a>:
-            </p>
+            <p title="also well-known as Frame Rate">FPS:</p>
             <p class="subSection">
                 <select name="framerate" oninput="giveFPS(this.value)">
                     <option value="12">12</option>
@@ -43,30 +41,26 @@
             </p>
         </div>
         <div class="section">
-            <p>
-                Average rendering time for a frame:
-            </p>
+            <p>Total frames:</p>
             <p class="subSection">
-                <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > h 
-                <input type="number" class="inputTime" name="dureeM" oninput="dureeAnimMinutes(this.value)" placeholder=0 > m 
-                <input type="number" class="inputTime" name="dureeS" oninput="dureeAnimSecondes(this.value)" placeholder=0 > s
+                <input type="number" oninput="" placeholder=0 >
             </p>
         </div>
         <div class="section">
-            <p>
-                Available computers:
+            <p>Average rendering time for a frame:</p>
+            <p class="subSection">
+                <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > h
+                <input type="number" class="inputTime" name="dureeM" oninput="dureeAnimMinutes(this.value)" placeholder=0 > m
             </p>
+        </div>
+        <div class="section">
+            <p>Available computers:</p>
             <p class="subSection">
                 <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > devices
             </p>
             </p>
         </div>
 	</div>
-	<div id="divResult" >
-		<p>
-			Total frames : <span id="finalFrames">0</span>
-		</p>
-    </div>
     <div id="finalTimeDiv">
         <p>Frames should be rendered in:</p>
         <p><span id="finalTime"><i>less time than it takes to write it</i></span>.</p>
@@ -75,10 +69,11 @@
 		<a href="index.html">Reset these insane values</a>
 	</p>
     <div id="tips">
-        Killer tips:
+        Awesome killer tips:
             <ul>
                 <li>use <kbd>Tab</kbd> key to quickly swith between values,</li>
-                <li>you can type value even when in a scrolllist (just  focus on it with mouse click or <kbd>Tab</kbd>)</li>
+                <li>you can type value even when in a scrolllist (just  focus on it with mouse click or <kbd>Tab</kbd>),</li>
+                <li>for texture baking, just directly set Frames number instead of duration.</li>
             </ul>
     </div>
 <script type="text/javascript">

@@ -1,227 +1,347 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>490</x>
-      <y>90</y>
-      <w>60</w>
-      <h>110</h>
+      <x>648</x>
+      <y>30</y>
+      <w>36</w>
+      <h>66</h>
     </coordinates>
-    <panel_attributes>Actor</panel_attributes>
+    <panel_attributes>User</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>450</y>
-      <w>210</w>
-      <h>90</h>
+      <x>156</x>
+      <y>282</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Minutes
 --
 id: animDtnM
 type: range int
 range: [0:59]
-[watch user inputs]</panel_attributes>
+[watch user inputs]
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>360</y>
-      <w>210</w>
-      <h>80</h>
+      <x>156</x>
+      <y>228</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Hour
 --
 id: animDtnH
 type: int
-[watch user inputs]</panel_attributes>
+[watch user inputs]
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>550</y>
-      <w>210</w>
-      <h>100</h>
+      <x>156</x>
+      <y>342</y>
+      <w>126</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Secondes
 --
 id: animDtnS
 type: range int
 range: [0:59]
-[watch user inputs]</panel_attributes>
+[watch user inputs]
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>160</x>
-      <y>330</y>
-      <w>230</w>
-      <h>330</h>
+      <x>150</x>
+      <y>210</y>
+      <w>138</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Animation Duration
 --
 bg=white
-layer=-1</panel_attributes>
+layer=-1
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>180</y>
-      <w>260</w>
-      <h>170</h>
+      <x>192</x>
+      <y>84</y>
+      <w>486</w>
+      <h>138</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;150.0;240.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0;790.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>460</x>
-      <y>310</y>
-      <w>400</w>
-      <h>230</h>
+      <x>306</x>
+      <y>210</y>
+      <w>240</w>
+      <h>138</h>
     </coordinates>
     <panel_attributes>Frame Rate
 
 --
 bg=white
-layer=-1</panel_attributes>
+layer=-1
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>360</y>
-      <w>210</w>
-      <h>80</h>
+      <x>312</x>
+      <y>240</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Presets
 --
 id: frmRate
 type: preset list of int
-[watch user inputs]</panel_attributes>
+[watch user inputs]
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>450</y>
-      <w>210</w>
-      <h>80</h>
+      <x>312</x>
+      <y>294</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Custom (optionnal)
 --
 id: frmRateUser
-type: custom user int
-[watch user inputs]</panel_attributes>
+type: int
+[watch user inputs]
+group=3</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>180</y>
-      <w>30</w>
-      <h>150</h>
+      <x>336</x>
+      <y>84</y>
+      <w>342</w>
+      <h>138</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0;550.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>670</x>
-      <y>360</y>
-      <w>200</w>
-      <h>120</h>
+      <x>432</x>
+      <y>240</y>
+      <w>120</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;.&gt;
-&lt;&lt;only one active&gt;&gt;</panel_attributes>
+&lt;&lt;only one active&gt;&gt;
+group=3</panel_attributes>
     <additional_attributes>10.0;100.0;70.0;100.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>920</x>
-      <y>310</y>
-      <w>230</w>
-      <h>330</h>
+      <x>864</x>
+      <y>186</y>
+      <w>138</w>
+      <h>138</h>
     </coordinates>
     <panel_attributes>Average Frame time
 --
 bg=white
-layer=-1</panel_attributes>
+layer=-1
+group=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>340</y>
-      <w>210</w>
-      <h>80</h>
+      <x>870</x>
+      <y>210</y>
+      <w>126</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Hour
 --
 id: avgFrmTime
 type: int
-[watch user input]</panel_attributes>
+[watch user input]
+group=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>430</y>
-      <w>210</w>
-      <h>90</h>
+      <x>870</x>
+      <y>264</y>
+      <w>126</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Minutes
 --
 id: animDtnM
 type: range int
 range: [0:59]
-[watch user inputs]</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>930</x>
-      <y>530</y>
-      <w>210</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Secondes
---
-id: animDtnS
-type: range int
-range: [0:59]
-[watch user inputs]</panel_attributes>
+[watch user inputs]
+group=4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>510</x>
-      <y>180</y>
-      <w>430</w>
-      <h>150</h>
+      <x>660</x>
+      <y>84</y>
+      <w>258</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>410.0;130.0;10.0;10.0</additional_attributes>
+    <additional_attributes>410.0;170.0;410.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>138</x>
+      <y>186</y>
+      <w>414</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>Duration Input
+--
+bg=white
+layer=-2
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>84</y>
+      <w>96</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;210.0;140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>210</y>
+      <w>150</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>576</x>
+      <y>204</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Duration input update frmNb
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>282</x>
+      <y>234</y>
+      <w>414</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;270.0;580.0;270.0;580.0;10.0;670.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>594</x>
+      <y>216</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>630</x>
+      <y>312</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>frmNb update Anim Duration
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>210</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Frame Number
+--
+id: frmNb
+type: int
+[watch user input]
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1026</x>
+      <y>210</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Available computers
+--
+id: hardWorkerz
+type: int
+[watch user input]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>84</y>
+      <w>444</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>720.0;210.0;720.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
