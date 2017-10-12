@@ -167,7 +167,7 @@ group=4</panel_attributes>
     </coordinates>
     <panel_attributes>Hour
 --
-id: avgFrmTimeH
+id: avgFrmTime
 type: int
 [watch user input]
 group=4</panel_attributes>
@@ -183,7 +183,7 @@ group=4</panel_attributes>
     </coordinates>
     <panel_attributes>Minutes
 --
-id: avgFrmTimeM
+id: animDtnM
 type: range int
 range: [0:59]
 [watch user inputs]

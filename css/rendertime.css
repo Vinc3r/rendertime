@@ -17,27 +17,10 @@ h1, h2{
     padding:0;
 }
 
-input, select{
+input{
     background-color: rgba(66,66,66,.8);
     border:0;
     color: #fff;
-    font-size: 1em;
-    text-align:center;
-    width: 50pt;
-}
-
-noscript p{
-    background-color: #dd3333;
-    color:#fff;
-    font-family:consolas;
-    width:100%;
-    padding:5% 0;
-    margin:0;
-    text-align:center;
-}
-
-#frmNb{
-    width:120pt;
 }
 
 #titles{
@@ -97,6 +80,12 @@ noscript p{
     #footer a:hover{
         color:#fff;
     }
+
+.inputTime{
+    width: 50pt;
+    text-align: center;
+    font-size: 1em;
+}
 
 .section{
     border-left: 1px solid #666;
