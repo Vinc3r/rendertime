@@ -1,3 +1,7 @@
+var inputElmts = [];
+var valuesArray = {};
+var lastFrameRateSet = 0;
+
 function on_load(){
 
 /* init all select elements */
@@ -15,20 +19,43 @@ function on_load(){
     set_html_select_time("avgFrmTimeM", sexagesimalArray, 0);
     set_html_select_time("frmRatePreset", framerateArray, 25);
 
-    var inputElmts = document.getElementsByClassName("watchUserInput");
+/*  adding listener */
+    inputElmts = document.getElementsByClassName("watchUserInput");
     for(var i = 0; i < inputElmts.length; i++){
-        inputElmts[i].addEventListener('input', ohYeah);
-    }
-
-    //    document.getElementsByClassName("inputTime").addEventListener('input', ohYeah);
-
+        valuesArray[inputElmts[i].id] = inputElmts[i].value;
+        inputElmts[i].addEventListener('input', get_value);
+    };
 };
 
-function ohYeah(elt){
-    elt = elt.originalTarget
-    console.log(elt.id)
-    console.log(elt.value)
-}
+function get_value(elt){
+/*
+        Update array of values, and relaunch time calcultion
+*/
+    elt = elt.target;
+    valuesArray[elt.id] = Number(elt.value);
+        
+    // specil case of framerate
+    if(elt.id == "frmRatePreset" || elt.id == "frmRateUser"){
+        lastFrameRateSet = elt.value;
+        if(elt.id == "frmRateUser"){
+            document.getElementById("frmRatePreset").value = null;
+        };
+        lastFrameRateSet = elt.value;
+        if(elt.id == "frmRatePreset"){
+            document.getElementById("frmRateUser").value = null;
+        };
+    };
+    
+    time_calculation();
+};
+
+function time_calculation(){
+/*
+    Caculate time needed
+*/
+    var animDtn = valuesArray["animDtnS"] + valuesArray["animDtnM"] * 60 + valuesArray["animDtnH"] * 3600;
+    var totalFrames = animDtn * lastFrameRateSet;
+};
 
 function set_html_select_time(selectHTMLElement, selectHTMLArray, selectHTMLselected){
 /*
