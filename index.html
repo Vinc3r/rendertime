@@ -4,37 +4,26 @@
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="css/favicon.gif">
     <link rel="stylesheet" media="screen" href="css/rendertime.css" type="text/css">
-    <meta name="description" content="This tool help you to estimate the required time for your render." />
+    <script type="text/javascript" src="js/rendertime.js"></script>
+    <meta name="description" content="This tool helps you to estimate the required time for your render." />
 </head>
 <body>
     <div id="titles">
         <h1 id="mainTitle" >Rendertime</h1>
         <h2>Help for needed-rendering-time approximation.</h2>
     </div>
-    <noscript>Sorry, but this tool needs javascript. I promise this will not break your computer.</noscript>
+    <noscript><p>Sorry, but this tool needs javascript. I promise it will not break your computer, check the code.</p></noscript>
     <div id="listValues" >
         <div class="section">
             <p>Animation duration:</p>
             <p class="subSection">
-                <input type="number" class="inputTime" name="durationH" oninput="durationInput(this.value, 'H')" placeholder=0 > h
-                <input type="number" class="inputTime" name="durationM" oninput="dureeAnimMinutes(this.value)" placeholder=0 min="0" max="59" > m
-                <input type="number" class="inputTime" name="durationS" oninput="dureeAnimSecondes(this.value)" placeholder=0 min="0" max="59" > s
+                <input type="number" class="inputTime" name="animDtnH" oninput="durationInput(this.value, 'H')" placeholder=0 > h
+                <select id="animDtnM">
+                </select> m
+                <select id="animDtnS">
+                </select> s
             </p>
         </div>
-        <select id="mySelect">
-        </select>
-        <script>
-            var myArray = ["Volvo","Saab","Mercades","Audi"];
-            var mySelect = document.getElementById("mySelect");
-
-        for (var i = 0; i < myArray.length; i++) {
-    var option = document.createElement("option");
-    option.setAttribute("value", myArray[i]);
-    option.text = myArray[i];
-    mySelect.appendChild(option);
-}
-
-        </script>
 
         <div class="section">
             <p title="also well-known as Frame Rate">FPS:</p>
@@ -59,14 +48,15 @@
         <div class="section">
             <p>Total frames:</p>
             <p class="subSection">
-                <input type="number" oninput="" placeholder=0 >
+                <input type="number" id="frmNb" placeholder=0 >
             </p>
         </div>
         <div class="section">
             <p>Average rendering time for a frame:</p>
             <p class="subSection">
                 <input type="number" class="inputTime" name="dureeH" oninput="dureeAnimHeures(this.value)" placeholder=0 > h
-                <input type="number" class="inputTime" name="dureeM" oninput="dureeAnimMinutes(this.value)" placeholder=0 min="0" max="59" > m
+                <select id="avgFrmTimeM">
+                </select> m
             </p>
         </div>
         <div class="section">
@@ -95,10 +85,6 @@
     <div id="footer">
         <p><a href="https://www.nothing-is-3d.com/">nothing-is-3d.com</a> - <a href="https://github.com/Vinc3r/rendertime">github</a></p>
     </div>
-<script type="text/javascript">
-function durationInput(val, timeType){
-    console.log(val+" ++++ "+timeType)
-}
-</script>
+<script type="text/javascript">on_load()</script>
 </body>
 </html>
