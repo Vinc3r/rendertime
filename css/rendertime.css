@@ -36,6 +36,22 @@ noscript p{
     text-align:center;
 }
 
+kbd {
+    font-family:consolas, monospace, arial;
+    font-weight:bold;
+    background-color:#181818;
+    color:#fff;
+    font-size:0.95em;
+    padding:6pt;
+    padding-top: 2pt;
+    padding-bottom: 2pt;
+    border-top:2pt solid #aaa;
+    border-right:2pt solid #999;
+    border-bottom:2pt solid #444;
+    border-left:2pt solid #555;
+    border-radius: 3pt;
+}
+
 #frmNb{
     width:120pt;
 }
@@ -61,14 +77,12 @@ noscript p{
 
 #tips{
     color: #aaa;
+    padding-top: 1%;
 }
 
-.externalLink{
-    font-family: consolas;
-    font-size: .75em;
+#finalTimeDiv, #title, .section{
+    border-left: 2pt solid #ff6c00;
 }
-
-
 
 #finalTimeDiv, #titles{
     background-color: rgba(66,66,66,.8);
@@ -86,6 +100,10 @@ noscript p{
     padding-left: 2%;
 }
 
+#footer, #tips{
+    border-top: 1pt solid #333;
+}
+
 #footer{
     text-align:center;
     font-size:0.8em;
@@ -98,8 +116,18 @@ noscript p{
         color:#fff;
     }
 
+.customUserValue{
+    font-style: italic;
+    font-weight: 100;
+    margin-left: 10pt;
+}
+
+.externalLink{
+    font-family: consolas;
+    font-size: .75em;
+}
+
 .section{
-    border-left: 1px solid #666;
     padding-left: 4pt;
     margin: 4pt 0;
 }
@@ -112,4 +140,8 @@ noscript p{
         padding-left: 10pt;
     }
 
-
+@media (max-width: 500pt) {
+    body{
+        background-image: none;
+    }
+}
