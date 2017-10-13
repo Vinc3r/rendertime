@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>784</x>
-      <y>0</y>
+      <x>680</x>
+      <y>8</y>
       <w>48</w>
       <h>88</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>128</x>
-      <y>336</y>
+      <x>24</x>
+      <y>344</y>
       <w>168</w>
       <h>72</h>
     </coordinates>
@@ -31,8 +31,8 @@ range: [0:59]
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>128</x>
-      <y>264</y>
+      <x>24</x>
+      <y>272</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -46,8 +46,8 @@ type: int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>128</x>
-      <y>416</y>
+      <x>24</x>
+      <y>424</y>
       <w>168</w>
       <h>80</h>
     </coordinates>
@@ -62,13 +62,13 @@ range: [0:59]
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>120</x>
-      <y>224</y>
+      <x>16</x>
+      <y>232</y>
       <w>184</w>
       <h>280</h>
     </coordinates>
     <panel_attributes>Animation Duration
-animDtn
+id:animDtn
 --
 bg=white
 layer=-1</panel_attributes>
@@ -77,8 +77,8 @@ layer=-1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>176</x>
-      <y>72</y>
+      <x>72</x>
+      <y>80</y>
       <w>648</w>
       <h>168</h>
     </coordinates>
@@ -88,13 +88,13 @@ layer=-1</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>328</x>
-      <y>224</y>
+      <x>224</x>
+      <y>232</y>
       <w>320</w>
       <h>184</h>
     </coordinates>
     <panel_attributes>Frame Rate
-frmRate
+id: frmRate
 --
 bg=white
 layer=-1</panel_attributes>
@@ -103,8 +103,8 @@ layer=-1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>264</y>
+      <x>232</x>
+      <y>272</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -118,8 +118,8 @@ type: preset list of int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>336</y>
+      <x>232</x>
+      <y>344</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -133,8 +133,8 @@ type: int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>368</x>
-      <y>72</y>
+      <x>264</x>
+      <y>80</y>
       <w>456</w>
       <h>168</h>
     </coordinates>
@@ -144,8 +144,8 @@ type: int
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1072</x>
-      <y>208</y>
+      <x>968</x>
+      <y>216</y>
       <w>184</w>
       <h>184</h>
     </coordinates>
@@ -160,8 +160,8 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>240</y>
+      <x>976</x>
+      <y>248</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -176,8 +176,8 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>312</y>
+      <x>976</x>
+      <y>320</y>
       <w>168</w>
       <h>72</h>
     </coordinates>
@@ -193,8 +193,8 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>72</y>
+      <x>696</x>
+      <y>80</y>
       <w>344</w>
       <h>152</h>
     </coordinates>
@@ -204,12 +204,13 @@ group=4</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>104</x>
+      <x>0</x>
       <y>192</y>
       <w>552</w>
-      <h>320</h>
+      <h>328</h>
     </coordinates>
     <panel_attributes>Duration Input
+class: dtnInput
 --
 bg=white
 layer=-2</panel_attributes>
@@ -218,8 +219,8 @@ layer=-2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>72</y>
+      <x>696</x>
+      <y>80</y>
       <w>128</w>
       <h>184</h>
     </coordinates>
@@ -229,8 +230,8 @@ layer=-2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>504</y>
+      <x>256</x>
+      <y>512</y>
       <w>192</w>
       <h>312</h>
     </coordinates>
@@ -240,8 +241,8 @@ layer=-2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>712</x>
-      <y>248</y>
+      <x>608</x>
+      <y>256</y>
       <w>80</w>
       <h>56</h>
     </coordinates>
@@ -251,8 +252,8 @@ layer=-2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>832</x>
-      <y>240</y>
+      <x>728</x>
+      <y>248</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -267,8 +268,8 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1288</x>
-      <y>240</y>
+      <x>1184</x>
+      <y>248</y>
       <w>168</w>
       <h>64</h>
     </coordinates>
@@ -282,8 +283,8 @@ type: int
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>72</y>
+      <x>696</x>
+      <y>80</y>
       <w>592</w>
       <h>184</h>
     </coordinates>
@@ -293,8 +294,8 @@ type: int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>536</x>
-      <y>760</y>
+      <x>432</x>
+      <y>768</y>
       <w>168</w>
       <h>344</h>
     </coordinates>
@@ -315,8 +316,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>296</y>
+      <x>592</x>
+      <y>304</y>
       <w>168</w>
       <h>520</h>
     </coordinates>
@@ -326,8 +327,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>896</y>
+      <x>832</x>
+      <y>904</y>
       <w>168</w>
       <h>136</h>
     </coordinates>
@@ -347,32 +348,10 @@ style=wordwrap</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1160</x>
-      <y>872</y>
-      <w>224</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt; convert_seconds_to_time() &gt;&gt;
---
-args:
-- seconds (or frames)
---
-convert any int as seconds into duration in H,M,S
---
-returns:
-- s2time[H,M,S]
-
-bg=orange
-style=wordwrap</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>400</y>
+      <x>360</x>
+      <y>408</y>
       <w>24</w>
       <h>416</h>
     </coordinates>
@@ -382,8 +361,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
-      <y>296</y>
+      <x>592</x>
+      <y>304</y>
       <w>232</w>
       <h>584</h>
     </coordinates>
@@ -393,8 +372,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>232</x>
-      <y>504</y>
+      <x>128</x>
+      <y>512</y>
       <w>320</w>
       <h>376</h>
     </coordinates>
@@ -404,8 +383,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1296</x>
-      <y>432</y>
+      <x>1192</x>
+      <y>440</y>
       <w>200</w>
       <h>152</h>
     </coordinates>
@@ -428,22 +407,27 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1032</x>
-      <y>704</y>
+      <x>1056</x>
+      <y>728</y>
       <w>200</w>
       <h>152</h>
     </coordinates>
-    <panel_attributes>&lt;&lt; convert_time_to_seconds() &gt;&gt;
+    <panel_attributes>&lt;&lt; time_to_frame() &gt;&gt;
 --
 args:
-- hour
-- minutes
-- seconds
+- value
+- mode
 --
-convert any duration time into one int in seconds
+if mode = true{
+convert time into frame (or seconds, same number)
+}
+if mode = false{
+convert frame (or secondes) into time h:m:s
+}
+
 --
 returns:
-- int time2S
+- Int or Array
 
 bg=orange
 style=wordwrap</panel_attributes>
@@ -452,8 +436,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1040</x>
-      <y>552</y>
+      <x>936</x>
+      <y>560</y>
       <w>192</w>
       <h>96</h>
     </coordinates>
@@ -471,8 +455,8 @@ bg=cyan</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1224</x>
-      <y>552</y>
+      <x>1120</x>
+      <y>560</y>
       <w>88</w>
       <h>24</h>
     </coordinates>

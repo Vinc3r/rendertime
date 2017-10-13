@@ -1,147 +1,153 @@
-body{
-    background: #222 url("background.png") no-repeat bottom right fixed;
-    color: #fff;
-    font-family: "Open Sans", Tahoma, Arial, Sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  background: #222 url("background.png") no-repeat bottom right fixed;
+  color: #fff;
+  font-family: "Open Sans", Tahoma, Arial, Sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-a{
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1pt dotted #fff;
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1pt dotted #fff;
 }
 
-h1, h2{
-    margin:0;
-    padding:0;
+h1, h2 {
+  margin: 0;
+  padding: 0;
 }
 
-input, select{
-    background-color: rgba(66,66,66,.8);
-    border:0;
-    color: #fff;
-    font-size: 1em;
-    text-align:center;
-    width: 50pt;
+input, select {
+  background-color: rgba(66, 66, 66, .8);
+  border: 0;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  width: 50pt;
 }
 
-noscript p{
-    background-color: #dd3333;
-    color:#fff;
-    font-family:consolas;
-    width:100%;
-    padding:5% 0;
-    margin:0;
-    text-align:center;
+noscript p {
+  background-color: #dd3333;
+  color: #fff;
+  font-family: consolas;
+  width: 100%;
+  padding: 5% 0;
+  margin: 0;
+  text-align: center;
 }
 
 kbd {
-    font-family:consolas, monospace, arial;
-    font-weight:bold;
-    background-color:#181818;
-    color:#fff;
-    font-size:0.95em;
-    padding:6pt;
-    padding-top: 2pt;
-    padding-bottom: 2pt;
-    border-top:2pt solid #aaa;
-    border-right:2pt solid #999;
-    border-bottom:2pt solid #444;
-    border-left:2pt solid #555;
-    border-radius: 3pt;
+  font-family: consolas, monospace, arial;
+  font-weight: bold;
+  background-color: #181818;
+  color: #fff;
+  font-size: 0.95em;
+  padding: 6pt;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+  border-top: 2pt solid #aaa;
+  border-right: 2pt solid #999;
+  border-bottom: 2pt solid #444;
+  border-left: 2pt solid #555;
+  border-radius: 3pt;
 }
 
-#frmNb{
-    width:120pt;
+#frmNb {
+  width: 120pt;
 }
 
-#titles{
-    padding: 4pt 0;
+#titles {
+  padding: 4pt 0;
 }
 
-#reInit{
-    padding: 10pt;
-    text-align: center;
-}
-    #reInit a{
-        color: #666;
-        border-color: #666;
-        font-style: italic;
-    }
-    #reInit a:hover{
-        color: #fff;
-        border-color: #fff;
-        font-style: normal;
-    }
-
-#tips{
-    color: #aaa;
-    padding-top: 1%;
+#reInit {
+  padding: 10pt;
+  text-align: center;
 }
 
-#finalTimeDiv, #title, .section{
-    border-left: 2pt solid #ff6c00;
+#reInit a {
+  color: #666;
+  border-color: #666;
+  font-style: italic;
 }
 
-#finalTimeDiv, #titles{
-    background-color: rgba(66,66,66,.8);
-    border-top: 1pt solid #111;
-    border-bottom: 1pt solid #111;
+#reInit a:hover {
+  color: #fff;
+  border-color: #fff;
+  font-style: normal;
 }
 
-#finalTimeDiv{
-    padding: 2% 5%;
-    min-height: 50pt;
-    line-height: 2em;
+#tips {
+  color: #aaa;
+  padding-top: 1%;
 }
 
-#titles, #listValues, #divResult, #tips{
-    padding-left: 2%;
+#finalTimeDiv, #title, .section {
+  border-left: 2pt solid #ff6c00;
 }
 
-#footer, #tips{
-    border-top: 1pt solid #333;
+#finalTimeDiv, #titles {
+  background-color: rgba(66, 66, 66, .8);
+  border-top: 1pt solid #111;
+  border-bottom: 1pt solid #111;
 }
 
-#footer{
-    text-align:center;
-    font-size:0.8em;
-}
-    #footer a{
-        border:0;
-        color:#999;
-    }
-    #footer a:hover{
-        color:#fff;
-    }
-
-.customUserValue{
-    font-style: italic;
-    font-weight: 100;
-    margin-left: 10pt;
+#finalTimeDiv {
+  padding: 2% 5%;
+  min-height: 50pt;
+  line-height: 2em;
 }
 
-.externalLink{
-    font-family: consolas;
-    font-size: .75em;
+#titles, #listValues, #divResult, #tips {
+  padding-left: 2%;
 }
 
-.section{
-    padding-left: 4pt;
-    margin: 4pt 0;
+#footer, #tips {
+  border-top: 1pt solid #333;
 }
-    .section p{
-        margin:0;
-        padding:4pt;
-    }
-    .subSection{
-        margin-left: 2.5%;
-        padding-left: 10pt;
-    }
+
+#footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#footer a {
+  border: 0;
+  color: #999;
+}
+
+#footer a:hover {
+  color: #fff;
+}
+
+.customUserValue {
+  font-style: italic;
+  font-weight: 100;
+  margin-left: 10pt;
+}
+
+.externalLink {
+  font-family: consolas;
+  font-size: .75em;
+}
+
+.section {
+  padding-left: 4pt;
+  margin: 4pt 0;
+}
+
+.section p {
+  margin: 0;
+  padding: 4pt;
+}
+
+.subSection {
+  margin-left: 2.5%;
+  padding-left: 10pt;
+}
 
 @media (max-width: 500pt) {
-    body{
-        background-image: none;
-    }
+  body {
+    background-image: none;
+  }
 }
