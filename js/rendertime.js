@@ -2,6 +2,7 @@ var inputElmts = [];
 var valuesArray = {};
 var lastFrameRateSet = 25;
 var dtnInputElmts = [];
+var totalFrames = 0
 
 function on_load() {
   /*
@@ -20,8 +21,9 @@ function on_load() {
   var framerateArray = [12, 24, 25, 30, 48, 50, 60, 72, 90, 100, 120, 144, 300]
   /* send params */
   set_html_select_time("animDtnM", sexagesimalArray, 0);
-  set_html_select_time("animDtnS", sexagesimalArray, 0);
+  set_html_select_time("animDtnS", sexagesimalArray, 1);
   set_html_select_time("avgFrmTimeM", sexagesimalArray, 0);
+  set_html_select_time("avgFrmTimeS", sexagesimalArray, 1);
   set_html_select_time("frmRatePreset", framerateArray, lastFrameRateSet);
 
   /*  adding listener */
@@ -46,7 +48,7 @@ function get_value(elt) {
   elt = elt.target;
   valuesArray[elt.id] = Number(elt.value);
 
-  // special case of framerate
+  // special cases of framerate, and also frame number direct input
   switch (elt.id) {
     case "frmRatePreset":
       lastFrameRateSet = elt.value;
@@ -56,38 +58,46 @@ function get_value(elt) {
       lastFrameRateSet = elt.value;
       document.getElementById("frmRatePreset").value = null;
       break;
+    case "frmNb":
+      var frames = Math.floor(elt.value / lastFrameRateSet) ;
+      var framesMod = elt.value % lastFrameRateSet; //dont know what to do with this
+      var duration = convert_number_to_time(frames)
+      document.getElementById("animDtnH").value = duration[0];
+      document.getElementById("animDtnM").value = duration[1];
+      document.getElementById("animDtnS").value = duration[2];
+      break;
     default:
       break;
   };
 
   // relation between anim duration input and frame number
   if (elt.className.indexOf("dtnInput") >= 0) {
-
+    totalFrames = (valuesArray["animDtnH"] * 3600 + valuesArray["animDtnM"] * 60 + valuesArray["animDtnS"]) * lastFrameRateSet;
+    document.getElementById("frmNb").value = totalFrames;
   }
 
   time_calculation();
 };
 
+function convert_number_to_time(nb){
+  // ~~ === Math.floor if I well understand, it looks cooler.
+  var h = ~~(nb / 3600);
+  var m = ~~((nb % 3600) / 60);
+  var s = nb % 60;
+  return [h, m, s];
+}
+
 function time_calculation() {
   /*
       Caculate time needed
   */
-  var animDtn = valuesArray["animDtnS"] + valuesArray["animDtnM"] * 60 + valuesArray["animDtnH"] * 3600;
-  var totalFrames = animDtn * lastFrameRateSet;
+  var frameNumber = document.getElementById("frmNb").value;
+  var computerz = document.getElementById("hardWorkerz").value;
+  var frameTime = document.getElementById("avgFrmTimeH").value * 3600 + document.getElementById("avgFrmTimeM").value * 60 + document.getElementById("avgFrmTimeS").value;
+  var totalTime = (frameNumber * frameTime) / computerz;
+  totalTime = convert_number_to_time(totalTime);
+  document.getElementById("finalTime").innerHTML = ~~(totalTime[0] / 24) + " d : " + totalTime[0]  % 24 + " h : " + totalTime[1] + " m : " + totalTime[2] + " s"
 };
-
-function time_to_frame(value, mode) {
-  /*
-      Convert time to frame, or seconds (mode = true)
-      or
-      convert frame (or seconds) to time in h:m:s (mode = false)
-  */
-  if (mode == true) {
-
-  } else {
-
-  };
-}
 
 function set_html_select_time(selectHTMLElement, selectHTMLArray, selectHTMLselected) {
   /*
