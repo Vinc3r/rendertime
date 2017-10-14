@@ -21,13 +21,13 @@
       <p class="subSection">
         <input type="number" class="inputTime watchUserInput dtnInput" id="animDtnH" name="animDtnH" value=0> h
         <select id="animDtnM" class="watchUserInput dtnInput"></select> m
-        <select id="animDtnS" class="watchUserInput dtnInput"></select> s
+        <select id="animDtnS" class="watchUserInput dtnInput"></select> s <span id="approxS"></span>
       </p>
     </div>
     <div class="section">
       <p title="also well-known as Frame Rate">FPS:</p>
       <p class="subSection">
-        <select id="frmRatePreset" name="frmRatePreset" class="watchUserInput dtnInput"></select> FPS <span class="customUserValue">(or <input type="number" id="frmRateUser" class="watchUserInput dtnInput" placeholder="custom" min="1"> value?)</span>
+        <select id="frmRatePreset" name="frmRatePreset" class="watchUserInput dtnInput"></select> FPS <span class="customUserValue">(or <input type="number" id="frmRateUser" class="watchUserInput dtnInput" placeholder="custom" min="1"></span>
       </p>
     </div>
     <div class="section">
@@ -53,7 +53,7 @@
   </div>
   <div id="finalTimeDiv">
     <p>Frames should be rendered in:</p>
-    <p><span id="finalTime"><i>less time than it takes to write it</i></span>.</p>
+    <p id="finalTime"><i>less time than it takes to write it</i>.</p>
   </div>
   <p id="reInit">
     <a href="index.html">Reset these insane values</a>
@@ -61,9 +61,11 @@
   <div id="tips">
     Awesome killer tips:
     <ul>
+      <li>of course, this tool doesn't work on IE or Edge. Don't use these. Please use <a href="https://www.mozilla.org/fr/firefox/">Firefox</a> for your safety,</li>
       <li>use <kbd>Tab</kbd> key to quickly swith between values,</li>
       <li>you can type value even when in a scrolllist (just focus on it with mouse click or <kbd>Tab</kbd>),</li>
-      <li>for texture baking, just directly set Frames number instead of duration.</li>
+      <li>for texture baking, just directly set Frames number instead of duration,</li>
+      <li>you love useless numberz ? check the browser console.</li>
     </ul>
   </div>
   <div id="footer">

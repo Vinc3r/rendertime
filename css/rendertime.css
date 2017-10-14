@@ -53,11 +53,12 @@ kbd {
 }
 
 #frmNb {
-  width: 120pt;
+  width: 180pt;
 }
 
 #titles {
   padding: 4pt 0;
+  margin-bottom: 2%;
 }
 
 #reInit {
@@ -82,7 +83,7 @@ kbd {
   padding-top: 1%;
 }
 
-#finalTimeDiv, #title, .section {
+#finalTimeDiv, #titles, .section {
   border-left: 2pt solid #ff6c00;
 }
 
@@ -93,9 +94,16 @@ kbd {
 }
 
 #finalTimeDiv {
-  padding: 2% 5%;
   min-height: 50pt;
   line-height: 2em;
+  margin-top: 2%;
+}
+#finalTimeDiv p{
+  margin: 0;
+  padding: 1% 4%;
+}
+#finalTime{
+  background-color: rgba(0,0,0,.8);
 }
 
 #titles, #listValues, #divResult, #tips {

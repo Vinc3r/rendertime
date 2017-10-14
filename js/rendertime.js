@@ -46,25 +46,32 @@ function get_value(elt) {
   */
 
   elt = elt.target;
-  valuesArray[elt.id] = Number(elt.value);
+  var eltValue = Number(elt.value);
+  valuesArray[elt.id] = eltValue;
 
   // special cases of framerate, and also frame number direct input
   switch (elt.id) {
     case "frmRatePreset":
-      lastFrameRateSet = elt.value;
+      lastFrameRateSet = eltValue;
       document.getElementById("frmRateUser").value = null;
       break;
     case "frmRateUser":
-      lastFrameRateSet = elt.value;
+      lastFrameRateSet = eltValue;
       document.getElementById("frmRatePreset").value = null;
       break;
     case "frmNb":
-      var frames = Math.floor(elt.value / lastFrameRateSet) ;
-      var framesMod = elt.value % lastFrameRateSet; //dont know what to do with this
+      var frames = Math.floor(eltValue / lastFrameRateSet);
+      var framesMod = eltValue % lastFrameRateSet;
       var duration = convert_number_to_time(frames)
       document.getElementById("animDtnH").value = duration[0];
       document.getElementById("animDtnM").value = duration[1];
       document.getElementById("animDtnS").value = duration[2];
+      if (framesMod > 0) {
+        document.getElementById("animDtnS").value = duration[2] + 1;
+        document.getElementById("approxS").innerHTML = "&plusmn";
+      } else {
+        document.getElementById("approxS").innerHTML = "";
+      };
       break;
     default:
       break;
@@ -72,15 +79,16 @@ function get_value(elt) {
 
   // relation between anim duration input and frame number
   if (elt.className.indexOf("dtnInput") >= 0) {
-    totalFrames = (valuesArray["animDtnH"] * 3600 + valuesArray["animDtnM"] * 60 + valuesArray["animDtnS"]) * lastFrameRateSet;
+    totalFrames = ((Number(valuesArray["animDtnH"] * 3600) + Number(valuesArray["animDtnM"] * 60) + Number(valuesArray["animDtnS"])) * lastFrameRateSet);
     document.getElementById("frmNb").value = totalFrames;
   }
 
   time_calculation();
 };
 
-function convert_number_to_time(nb){
+function convert_number_to_time(nb) {
   // ~~ === Math.floor if I well understand, it looks cooler.
+  nb = Number(nb);
   var h = ~~(nb / 3600);
   var m = ~~((nb % 3600) / 60);
   var s = nb % 60;
@@ -91,12 +99,22 @@ function time_calculation() {
   /*
       Caculate time needed
   */
-  var frameNumber = document.getElementById("frmNb").value;
-  var computerz = document.getElementById("hardWorkerz").value;
-  var frameTime = document.getElementById("avgFrmTimeH").value * 3600 + document.getElementById("avgFrmTimeM").value * 60 + document.getElementById("avgFrmTimeS").value;
-  var totalTime = (frameNumber * frameTime) / computerz;
+  var frameNumber = Number(document.getElementById("frmNb").value);
+  var computerz = Number(document.getElementById("hardWorkerz").value);
+  var frameTime = Number(document.getElementById("avgFrmTimeH").value * 3600) + Number(document.getElementById("avgFrmTimeM").value * 60) + Number(document.getElementById("avgFrmTimeS").value);
+  var totalTime = Math.floor((frameNumber * frameTime) / computerz);
+  var totalTimeMod = (frameNumber * frameTime) % computerz;
+  console.log("if anyone interested, raw total time in: \n seconds = " + totalTime + "\n minutes = " + totalTime / 60 + "\n hourz = " + (totalTime / 3660) + "\n dayz = " + (totalTime / (3660 * 24)) + "\n months (30 days) = " + (totalTime / ((3660 * 24) * 30)) + "\n years = " + (totalTime / (((3660 * 24) * 30)*12)));
+  console.log("++++++++++++++++++++++++++++");
   totalTime = convert_number_to_time(totalTime);
-  document.getElementById("finalTime").innerHTML = ~~(totalTime[0] / 24) + " d : " + totalTime[0]  % 24 + " h : " + totalTime[1] + " m : " + totalTime[2] + " s"
+  var d = ~~(totalTime[0] / 24);
+  var h = totalTime[0] % 24;
+  var m = totalTime[1];
+  var s = totalTime[2];
+  if (totalTimeMod > 0) {
+    s++;
+  };
+  document.getElementById("finalTime").innerHTML = d + " d : " + h + " h : " + m + " m : " + s + " s"
 };
 
 function set_html_select_time(selectHTMLElement, selectHTMLArray, selectHTMLselected) {
