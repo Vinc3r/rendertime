@@ -61,6 +61,12 @@ kbd {
   margin-bottom: 2%;
 }
 
+#logo{
+    float:left;
+    width: 80px;
+    padding-right: 10pt;
+}
+
 #reInit {
   padding: 10pt;
   text-align: center;
@@ -157,5 +163,11 @@ kbd {
 @media (max-width: 500pt) {
   body {
     background-image: none;
+  }
+  #titles{
+    font-size:.8em;
+  }
+  #logo{
+    float:none;
   }
 }
